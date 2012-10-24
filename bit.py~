@@ -3,22 +3,6 @@ import random
 
 urlslist = {}
 shorturlslist={}
-def main():
-	
-	while True:
-	    b = input("1.Url Shortner \n2.Quit\n")
-	    if b==1:
-		while True:
-		    url = raw_input("Enter URL: ")
-		    shortenedlength = input("Enter Length of Shortened URL: ")
-		    if (checkurl(url) == True):
-		        break
-		    print 'Error! Try Again.'
-		print shortenurl(url, shortenedlength)
-	    elif b==2:
-		break
-	    else:
-		break
 
 def shortenurl(url, length):
     shortlist = []
@@ -42,5 +26,18 @@ def checkurl(url):
         return True
     return False
     
-if __name__ == '__main__':
-	main()
+
+while True:
+    b = input("1.Url Shortner \n2.Quit\n")
+    if b==1:
+        while True:
+            url = raw_input("Enter URL: ")
+            shortenedlength = input("Enter Length of Shortened URL: ")
+            if (checkurl(url) == True):
+                break
+            print 'Error! Try Again.'
+        print shortenurl(url, shortenedlength)
+    elif b==2:
+        break
+    else:
+	break

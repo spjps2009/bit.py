@@ -1,0 +1,7 @@
+body{
+	background:white;
+	color:blue;
+}
+.frame{
+	color:red;
+}

@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset 'utf.8' />
+	<title>Hello</title>
+	<link rel="stylesheet" type="text/css" href="/static/styles.css" />
+
+</head>
+	<body>
+
+		<form action="/" target="hi" method="post">
+		Enter url:<input type="text" name="url" /><br>
+		Enter length:<input type="text" name="length" /><br>
+		<input type="submit" value="Shorten URL" />
+		
+
+		</form>
+		<iframe id="frame" name="hi"></iframe>
+	</body>
+</html>
