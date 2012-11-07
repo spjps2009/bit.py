@@ -6,11 +6,14 @@ import bit
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/", methods=['GET','POST'])
 
 def index():
-	return render_template('hello.html')
-@app.route("/", methods=['POST'])
+	if request.method == 'POST':
+		return render_template('hello.html', shortened_url=shorten(), original_url=request.form["url"], length=request.form["length"])
+	else:
+		return render_template('hello.html')
+
 def shorten():
 	try:
 		length = int(request.form["length"])

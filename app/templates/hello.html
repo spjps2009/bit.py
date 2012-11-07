@@ -4,17 +4,32 @@
 	<meta charset 'utf.8' />
 	<title>Hello</title>
 	<link rel="stylesheet" type="text/css" href="/static/styles.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css" />
 
 </head>
-	<body>
+	<body >
+		<div class="body">
+			<div class="container lightblue" >
+				<h1 id="title">bit.py</h1>
+				<form action="/" method="post">
+				<div>
+					<input type="text" name="url" class="input-xxlarge search-query " style="height: 50px; font-size:24px; text-align:center" value="{{original_url}}"/>
+				</div>
+				<div>
+					<label for="length-input">Enter length:</label><input type="text" name="length" class="text-input2" id="length-input" height="50px" value="{{length}}"/>
+				</div>
+				<div class="spanwidth" style="text-align:center; margin-left:25%">
+					<input type="submit" value="Shorten URL" class="btn btn-success btn-large btn-block marginsd" style="margin-bottom: 200px margin-top:10%"/>
+				</div>
 
-		<form action="/" target="hi" method="post">
-		Enter url:<input type="text" name="url" /><br>
-		Enter length:<input type="text" name="length" /><br>
-		<input type="submit" value="Shorten URL" />
+			</div>
+
+			<div class="url textarea wordwrap widthdiv" style="margin-top:10%; margin-left:auto; margin-right:auto; text-align:center">
+{{ shortened_url }}
+				
+			</div>
+		</div>
 		
-
-		</form>
-		<iframe frameborder="0" border="0" cellspacing="0" style="border-style: none; width: 100%; height: 120px; color: red;" name="hi"></iframe>
+		
 	</body>
 </html>
