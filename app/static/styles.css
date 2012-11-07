@@ -1,5 +1,5 @@
 
-body{
+.body{
 	background-color: #FFFF99;
 }
 .lightblue{
@@ -90,6 +90,7 @@ div{
 .widthdiv{
 	max-width: 50%;
 	text-align: center;
+
 }
 .marginsd{
 	padding-bottom: 10px;
